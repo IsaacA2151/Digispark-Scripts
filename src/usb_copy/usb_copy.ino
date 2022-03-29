@@ -1,8 +1,6 @@
 #include "DigiKeyboard.h"
 
 void setup() {
-  // put your setup code here, to run once:
-
 }
 
 void loop() {
@@ -14,9 +12,7 @@ void loop() {
     DigiKeyboard.print("powershell");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(1000);
-
-//    DigiKeyboard.delay(2000);
-//    DigiKeyboard.sendKeyStroke(0);
+  
     DigiKeyboard.print("Set-WinUserLanguageList -LanguageList en-US -Force");
     DigiKeyboard.delay(500);
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
