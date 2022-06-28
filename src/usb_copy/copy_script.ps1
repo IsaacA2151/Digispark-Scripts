@@ -10,6 +10,5 @@ for /f %%i in ('\"wmic logicaldisk get name, volumename | find \"DRIVENAME') do 
 $p=(Get-Location).Path;
 $f=(Get-ChildItem -Name);
 $len=($f|Measure-Object).count;
-for($i=0;$i-le$len;$i++){$s=$f[$i];
-if(($s|Out-String)-ne($c|Out-String)){Copy-Item $s -Destination $c -Recurse}};
+for($i=0;$i-le$len;$i++){$s=$f[$i];if(($s|Out-String)-ne($c|Out-String)){Copy-Item $s -Destination $c -Recurse}};
 Set-WinUserLanguageList -LanguageList en-GB -Force
